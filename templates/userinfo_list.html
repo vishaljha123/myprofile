@@ -1,0 +1,22 @@
+{% block content %}
+    <h2>Candidates</h2>
+    <ul>
+        {% for object  in object_list %}
+        <li>{{ object.first_name }} {{ object.last_name }} </li>
+        <li>{{ object.email_add }}</li>
+        <li>{{ object.phone }}</li>
+        <li>{{ object.position }}</li>
+                  <li>{{ object.education }}</li>
+                  <li>{{ object.work_exp }}</li>
+        <a href = "{{ object.resume }}" >Resume</a>
+
+                <video width="320" height="240" autoplay controls>
+                {{ object.video_resume  }}
+
+
+                    </video>
+            </li>>
+
+        {% endfor %}
+    </ul>
+{% endblock %}
